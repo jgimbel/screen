@@ -1,6 +1,6 @@
 <?php
 
-$link = mysql_connect('localhost', 'root', 'usbw');
+$link = mysql_connect("localhost", "mysql");
 if (!$link) { die('Could not connect: ' . mysql_error()); }
 
 $db_selected = mysql_select_db('screen', $link);
