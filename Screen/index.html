@@ -1,0 +1,54 @@
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<link href="css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="Initialize();">
+    <div id="dvTopLeft">
+        <div id="dvLogo" style="display:none;"><img src="images/logo.png" id="imgTopLeft" /></div>
+		<div id="dvWeather" style="display:none;" class="weather">
+			<div class="weather-icon-div"><img src="images/Weather/<?php print($icon); ?>.png" /></div>
+			<center>
+			<div class="weather-info-div">
+				<span class="weather-info-header">Union College Weather</span>
+				<span class="weather-info-current"><?php print($weather->get_temperature()); ?>&deg;F</span>
+				<span class="weather-info-highs">High: <?php print($fore[0]->get_high()); ?>&deg;F | Low: <?php print($fore[0]->get_low()); ?>&deg;F</span>
+				<span class="weather-info-forecast"><?php print($next_day); ?> Low: <?php print($fore[1]->get_low()); ?>&deg;F
+						High: <?php print($fore[1]->get_high()); ?>&deg;F</span>
+				<span class="weather-info-forecast"><?php print($next_day2); ?> Low: <?php print($fore[2]->get_low()); ?>&deg;F
+				High: <?php print($fore[2]->get_high()); ?>&deg;F</span>
+			</div>
+			</center>
+		</div>
+    </div>
+    <div id="dvMiddleLeft">
+		<img id="imgMain" style="max-width:100%; display:none;"></img>
+    </div>
+    <div id="dvBottom">
+		<div id="dvNews"></div>
+
+			<div id="dvStocks1" style="display:none;">
+			<img id="imgStockImg1" style="height:30%;">
+			<label id="lbStockNamePts1" style="font-weight:bold;"></label>
+			<label id="lbStockPct1" style="font-size:60%;"></label>
+			</div>
+
+			<div id="dvStocks2" style="display:none;">
+			<img id="imgStockImg2" style="height:30%;">
+			<label id="lbStockNamePts2" style="font-weight:bold;"></label>
+			<label id="lbStockPct2" style="font-size:60%;"></label>
+			</div>
+
+			<div id="dvStocks3" style="display:none;">
+			<img id="imgStockImg3" style="height:30%;">
+			<label id="lbStockNamePts3" style="font-weight:bold;"></label>
+			<label id="lbStockPct3" style="font-size:60%;"></label>
+			</div>
+		</div>
+    </div>
+    <div id="dvRight">
+		<img id="imgRight" style="max-height:100%; display:none;"></img>
+    </div>
+</body>
+</html>
